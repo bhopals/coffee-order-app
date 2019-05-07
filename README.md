@@ -31,4 +31,4 @@ There is a drink vendor which serves juices, coffee etx. There is a set of pre d
 
 ## Demo
 
-[Demo Link](https://analog-clocks.herokuapp.com/)
+[Demo Link](https://coffee-order-app.herokuapp.com/)
