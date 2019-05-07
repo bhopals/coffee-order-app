@@ -1,0 +1,209 @@
+var menuData =
+
+[
+    {
+      "itemId": 0,
+      "isActive": true,
+      "itemCost": "10",
+      "itemName": "LATTE",
+      "excludedList":[],
+      "ingredients": [
+        {
+          "itemId": 0,
+          "ingredientId": 0,
+          "ingredientName": "SUGAR",
+          "ingredientCost": "2",
+          "isIngredientAdded": false,
+          "isIngredientAlergic": false
+        },
+        {
+          "itemId": 0,
+          "ingredientId": 1,
+          "ingredientName": "MILK",
+          "ingredientCost": "3",
+          "isIngredientAdded": false,
+          "isIngredientAlergic": false
+        },
+        {
+          "itemId": 0,
+          "ingredientId": 2,
+          "ingredientName": "COFFEE",
+          "ingredientCost": "2",
+          "isIngredientAdded": false,
+          "isIngredientAlergic": false
+        },
+        {
+            "itemId": 0,
+            "ingredientId": 3,
+            "ingredientName": "WATER",
+            "ingredientCost": "3",
+            "isIngredientAdded": false,
+            "isIngredientAlergic": false
+          }
+      ]
+    },
+    {
+      "itemId": 1,
+      "isActive": true,
+      "itemCost": "18",
+      "itemName": "ESPRESSO",
+      "excludedList":[],
+      "ingredients": [
+        {
+          "itemId": 1,
+          "ingredientId": 0,
+          "ingredientName": "WATER",
+          "ingredientCost": "2",
+          "isIngredientAdded": false,
+          "isIngredientAlergic": false
+        },
+        {
+          "itemId": 1,
+          "ingredientId": 1,
+          "ingredientName": "SUGAR",
+          "ingredientCost": "3",
+          "isIngredientAdded": false,
+          "isIngredientAlergic": false
+        },
+        {
+          "itemId": 1,
+          "ingredientId": 2,
+          "ingredientName": "MILK",
+          "ingredientCost": "3",
+          "isIngredientAdded": false,
+          "isIngredientAlergic": false
+        },
+        { 
+            "itemId": 1,
+            "ingredientId": 3,
+            "ingredientName": "COCOA POWDER",
+            "ingredientCost": "5",
+            "isIngredientAdded": false,
+            "isIngredientAlergic": false
+          },
+          {
+            "itemId": 1,
+            "ingredientId": 4,
+            "ingredientName": "CINNAMON",
+            "ingredientCost": "5",
+            "isIngredientAdded": false,
+            "isIngredientAlergic": false
+          }
+      ]
+    },
+    {
+      "itemId": 2,
+      "isActive": true,
+      "itemCost": "15",
+      "excludedList":[],
+      "itemName": "BANANA SMOOTHIE",
+      "ingredients": [
+        {
+          "itemId": 2,
+          "ingredientId": 0,
+          "ingredientName": "SUGAR",
+          "ingredientCost": "2",
+          "isIngredientAdded": false,
+          "isIngredientAlergic": false
+        },
+        {
+          "itemId": 2,
+          "ingredientId": 1,
+          "ingredientName": "WATER",
+          "ingredientCost": "2",
+          "isIngredientAdded": false,
+          "isIngredientAlergic": false
+        },
+        {
+          "itemId": 2,
+          "ingredientId": 2,
+          "ingredientName": "BANANA",
+          "ingredientCost": "3",
+          "isIngredientAdded": false,
+          "isIngredientAlergic": false
+        },
+        { 
+            "itemId": 2,
+            "ingredientId": 3,
+            "ingredientName": "MILK",
+            "ingredientCost": "3",
+            "isIngredientAdded": false,
+            "isIngredientAlergic": false
+          },
+          {
+            "itemId": 2,
+            "ingredientId": 4,
+            "ingredientName": "ICE CREAM",
+            "ingredientCost": "2",
+            "isIngredientAdded": false,
+            "isIngredientAlergic": false
+          },
+          {
+            "itemId": 2,
+            "ingredientId": 5,
+            "ingredientName": "DRY FRUITS",
+            "ingredientCost": "3",
+            "isIngredientAdded": false,
+            "isIngredientAlergic": false
+          }
+      ]
+    },
+    {
+        "itemId": 3,
+        "isActive": true,
+        "itemCost": "20",
+        "excludedList":[],
+        "itemName": "PEANUT SHAKE",
+        "ingredients": [
+          {
+            "itemId": 3,
+            "ingredientId": 0,
+            "ingredientName": "PEANUT",
+            "ingredientCost": "2",
+            "isIngredientAdded": false,
+            "isIngredientAlergic": false
+          },
+          {
+            "itemId": 3,
+            "ingredientId": 1,
+            "ingredientName": "SUGAR",
+            "ingredientCost": "3",
+            "isIngredientAdded": false,
+            "isIngredientAlergic": false
+          },
+          {
+            "itemId": 3,
+            "ingredientId": 2,
+            "ingredientName": "MILK",
+            "ingredientCost": "5",
+            "isIngredientAdded": false,
+            "isIngredientAlergic": false
+          },
+          { 
+              "itemId": 3,
+              "ingredientId": 3,
+              "ingredientName": "HONEY",
+              "ingredientCost": "3",
+              "isIngredientAdded": false,
+              "isIngredientAlergic": false
+            },
+            {
+              "itemId": 3,
+              "ingredientId": 4,
+              "ingredientName": "DRY FRUITSI",
+              "ingredientCost": "2",
+              "isIngredientAdded": false,
+              "isIngredientAlergic": false
+            },
+            {
+              "itemId": 3,
+              "ingredientId": 5,
+              "ingredientName": "CE CREAM",
+              "ingredientCost": "5",
+              "isIngredientAdded": false,
+              "isIngredientAlergic": false
+            }
+        ]
+      }
+  ]
+
