@@ -28,6 +28,7 @@
             priceDetailsObject['-'+element.ingredientName] = element.ingredientCost;
         });
     }
+    
 
 
     var Price  = function(data) {
