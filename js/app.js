@@ -28,7 +28,7 @@
             priceDetailsObject['-'+element.ingredientName] = element.ingredientCost;
         });
     }
-    
+
 
 
     var Price  = function(data) {
@@ -121,6 +121,11 @@
         let elements = inputString.split(",");
         elements.forEach(function(value, index){
             value = value.toUpperCase().trim();
+            if(value === null || value === "") {
+                output = "Empty Parameters are not allowed";
+                return;
+            }
+
             if(index === 0) {                
                 if(value.indexOf("-") !== -1  || !priceDetailsObject[value]) {
                     output = "Selected Item ["+value+"] is Invalid.";
