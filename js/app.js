@@ -143,12 +143,17 @@
             }
         });
 
+        let finalPrice = itemPrice-excludedPrice;
+        if(elements.length > 2 && finalPrice === 0) {
+            output = "AtLeast one Ingrediants should be selected";
+        }
 
         if(!output) {
-            output = "Total PRICE to be PAID is:"+(itemPrice-excludedPrice)+"$";
+            output = "Total PRICE to be PAID is:"+finalPrice+"$";
         }
         
         outputElement.innerHTML = output;
+        document.getElementById('calcuated-cost').innerHTML=finalPrice; 
     }
 
 
