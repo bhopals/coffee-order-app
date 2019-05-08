@@ -53,7 +53,7 @@ var menuData =
           "itemId": 1,
           "ingredientId": 0,
           "ingredientName": "WATER",
-          "ingredientCost": "2",
+          "ingredientCost": "3",
           "isIngredientAdded": false,
           "isIngredientAlergic": false
         },
@@ -61,7 +61,7 @@ var menuData =
           "itemId": 1,
           "ingredientId": 1,
           "ingredientName": "SUGAR",
-          "ingredientCost": "3",
+          "ingredientCost": "2",
           "isIngredientAdded": false,
           "isIngredientAlergic": false
         },
@@ -94,7 +94,7 @@ var menuData =
     {
       "itemId": 2,
       "isActive": true,
-      "itemCost": "15",
+      "itemCost": "16",
       "excludedList":[],
       "itemName": "BANANA SMOOTHIE",
       "ingredients": [
@@ -110,7 +110,7 @@ var menuData =
           "itemId": 2,
           "ingredientId": 1,
           "ingredientName": "WATER",
-          "ingredientCost": "2",
+          "ingredientCost": "3",
           "isIngredientAdded": false,
           "isIngredientAlergic": false
         },
@@ -151,7 +151,7 @@ var menuData =
     {
         "itemId": 3,
         "isActive": true,
-        "itemCost": "20",
+        "itemCost": "17",
         "excludedList":[],
         "itemName": "PEANUT SHAKE",
         "ingredients": [
@@ -167,7 +167,7 @@ var menuData =
             "itemId": 3,
             "ingredientId": 1,
             "ingredientName": "SUGAR",
-            "ingredientCost": "3",
+            "ingredientCost": "2",
             "isIngredientAdded": false,
             "isIngredientAlergic": false
           },
@@ -175,7 +175,7 @@ var menuData =
             "itemId": 3,
             "ingredientId": 2,
             "ingredientName": "MILK",
-            "ingredientCost": "5",
+            "ingredientCost": "3",
             "isIngredientAdded": false,
             "isIngredientAlergic": false
           },
@@ -198,7 +198,7 @@ var menuData =
             {
               "itemId": 3,
               "ingredientId": 5,
-              "ingredientName": "CE CREAM",
+              "ingredientName": "ICE CREAM",
               "ingredientCost": "5",
               "isIngredientAdded": false,
               "isIngredientAlergic": false

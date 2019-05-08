@@ -1,6 +1,7 @@
 body {
     margin:10 auto;
     color:#ffffff;
+    line-height: 1.4em;
 
 }
 #coffee-section {
@@ -15,8 +16,10 @@ body {
 
 h2 {
     border: 1px solid #fff;
-    padding: 10px;
-    text-align: center
+    padding: 5px 0px;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
 }
 
 .content-container {
@@ -25,7 +28,7 @@ h2 {
 
 .content {
    
-    padding: 10px;
+    padding: 10px 2px;
     width:100%;
 }
 
@@ -59,7 +62,7 @@ h5 {
 .item {
     border: 1px solid #fff;
     margin:10px;
-    padding:10px;
+    padding:1px 10px;
 }
 
 .container-item {
@@ -74,7 +77,7 @@ button {
     margin: 10px 0;
     border: solid 1px transparent;
     border-radius: 4px;
-    padding: 0.5em 1em;
+    padding: 0.3em 1em;
     color: #FFFFFF;
     background-color: #b97b4a;
     width:70%;

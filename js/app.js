@@ -18,7 +18,6 @@
             formPriceArray(item.ingredients, priceDetailsObject);
         });
 
-        console.log("priceDetailsObject::",priceDetailsObject);
         const buttonElem =  document.getElementById('processButton');     
         buttonElem.onclick = processInputAndCalcualteCost.bind(this, priceDetailsObject);
 
@@ -71,7 +70,6 @@
     }
 
     function buildMenuItem(self, menuItem, menuList){  
-        console.log("selfs",self);      
         const span = document.createElement('span');
         const ingredients = document.getElementById('ingredients');
         span.setAttribute('class', 'badge badge-primary badge-pill price');
@@ -109,24 +107,19 @@
 
 
     function processInputAndCalcualteCost(priceDetailsObject) {
-        let output = "Default Test";
-        console.log("priceDetailsObject:",priceDetailsObject);
-
+        let output;
+        let itemPrice = 0;
+        let excludedPrice = 0;
+        let outputElement = document.getElementById('output-content'); 
         let inputString = document.getElementById('inputString').value;
 
         if(!inputString) {
             return;
         }
        
-        let outputElement = document.getElementById('output-content'); 
-        
-        let itemPrice = 0;
-        let excludedPrice = 0;
-
         let elements = inputString.split(",");
         elements.forEach(function(value, index){
             value = value.toUpperCase().trim();
-            console.log("value:",value);
             if(index === 0) {                
                 if(value.indexOf("-") !== -1  || !priceDetailsObject[value]) {
                     output = "Selected Item ["+value+"] is Invalid.";
@@ -134,9 +127,7 @@
                 } else {
                     itemPrice = parseInt(priceDetailsObject[value]); 
                 }
-                
             } else {
-
                 if(value.indexOf("-") === -1 || !priceDetailsObject[value]) {
                     output = "Selected Ingrediants ["+value+"] is Invalid.";
                     return;
@@ -144,8 +135,8 @@
                     excludedPrice += parseInt(priceDetailsObject[value]); 
                 }
             }
+        });
 
-        })
 
         if(!output) {
             output = "Total PRICE to be PAID is:"+(itemPrice-excludedPrice)+"$";
