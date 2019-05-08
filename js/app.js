@@ -26,7 +26,7 @@
 
     function formPriceArray(objectArray, priceDetailsObject) {
         objectArray.forEach(function(element){
-            priceDetailsObject[element.ingredientName] = element.ingredientCost;
+            priceDetailsObject['-'+element.ingredientName] = element.ingredientCost;
         });
     }
 
@@ -83,6 +83,13 @@
         menuList.append(button);        
     }
 
+    var coffeeOrder = (function(e){
+		var counter = 0;
+		return function (e){			
+			counter++;
+		}
+	})();
+
     function calculatePrice(elemValue, e) {
         let calcuatedVal = 0;
         let costElem = document.getElementById('calcuated-cost');        
@@ -110,19 +117,18 @@
         if(!inputString) {
             return;
         }
-
-        inputString = inputString.toUpperCase().replace(/-/g,'');
+       
         let outputElement = document.getElementById('output-content'); 
         
         let itemPrice = 0;
         let excludedPrice = 0;
-       
+
         let elements = inputString.split(",");
         elements.forEach(function(value, index){
             value = value.toUpperCase().trim();
-            if(index === 0) {
-
-                if(value.charAt(0) === "-" && !priceDetailsObject[value]) {
+            console.log("value:",value);
+            if(index === 0) {                
+                if(value.indexOf("-") !== -1  || !priceDetailsObject[value]) {
                     output = "Selected Item ["+value+"] is Invalid.";
                     return;
                 } else {
@@ -131,7 +137,7 @@
                 
             } else {
 
-                if(value.charAt(0) !== "-" && !priceDetailsObject[value]) {
+                if(value.indexOf("-") === -1 || !priceDetailsObject[value]) {
                     output = "Selected Ingrediants ["+value+"] is Invalid.";
                     return;
                 } else {
@@ -141,19 +147,15 @@
 
         })
 
-        console.log("inputString",inputString);
-        console.log("outputElement:",outputElement);
-        output = "Total PRICE to be PAID is:"+(itemPrice-excludedPrice)+"$";
+        if(!output) {
+            output = "Total PRICE to be PAID is:"+(itemPrice-excludedPrice)+"$";
+        }
+        
         outputElement.innerHTML = output;
     }
 
 
-	var coffeeOrder = (function(e){
-		var counter = 0;
-		return function (e){			
-			counter++;
-		}
-	})();
+	
 
 	
     window.CoffeeOrder = CoffeeOrder;
