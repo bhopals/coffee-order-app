@@ -6,15 +6,30 @@
         self.ingredientsList = [];
         const menuList = document.getElementById('menu-items');
         const totalCosts = document.getElementById('total-cost');
-        
+
+        let priceDetailsObject = {};
+
         self.data.forEach(function(item) {
             self.ingredientsList.push(item);
             self.ingredientsItems = new Ingredients(item.ingredients);
             self.price = new Price(item.ingredients);
             buildMenuItem(self, item, menuList);
+            priceDetailsObject[item.itemName] = item.itemCost; 
+            formPriceArray(item.ingredients, priceDetailsObject);
         });
 
+        console.log("priceDetailsObject::",priceDetailsObject);
+        const buttonElem =  document.getElementById('processButton');     
+        buttonElem.onclick = processInputAndCalcualteCost.bind(this, priceDetailsObject);
+
     }
+
+    function formPriceArray(objectArray, priceDetailsObject) {
+        objectArray.forEach(function(element){
+            priceDetailsObject[element.ingredientName] = element.ingredientCost;
+        });
+    }
+
 
     var Price  = function(data) {
         this.data = data;
@@ -83,6 +98,55 @@
         }
         costElem.innerHTML = calcuatedVal;
     }
+
+
+
+    function processInputAndCalcualteCost(priceDetailsObject) {
+        let output = "Default Test";
+        console.log("priceDetailsObject:",priceDetailsObject);
+
+        let inputString = document.getElementById('inputString').value;
+
+        if(!inputString) {
+            return;
+        }
+
+        inputString = inputString.toUpperCase().replace(/-/g,'');
+        let outputElement = document.getElementById('output-content'); 
+        
+        let itemPrice = 0;
+        let excludedPrice = 0;
+       
+        let elements = inputString.split(",");
+        elements.forEach(function(value, index){
+            value = value.toUpperCase().trim();
+            if(index === 0) {
+
+                if(value.charAt(0) === "-" && !priceDetailsObject[value]) {
+                    output = "Selected Item ["+value+"] is Invalid.";
+                    return;
+                } else {
+                    itemPrice = parseInt(priceDetailsObject[value]); 
+                }
+                
+            } else {
+
+                if(value.charAt(0) !== "-" && !priceDetailsObject[value]) {
+                    output = "Selected Ingrediants ["+value+"] is Invalid.";
+                    return;
+                } else {
+                    excludedPrice += parseInt(priceDetailsObject[value]); 
+                }
+            }
+
+        })
+
+        console.log("inputString",inputString);
+        console.log("outputElement:",outputElement);
+        output = "Total PRICE to be PAID is:"+(itemPrice-excludedPrice)+"$";
+        outputElement.innerHTML = output;
+    }
+
 
 	var coffeeOrder = (function(e){
 		var counter = 0;
